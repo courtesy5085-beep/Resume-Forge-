@@ -1,0 +1,32 @@
+{
+  "name": "resumeforge-ai",
+  "version": "1.0.0",
+  "description": "AI-powered SaaS platform for resume building and job search optimization",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev --no-cache --parallel",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "test:coverage": "turbo run test:coverage",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "type-check": "turbo run type-check",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "db:migrate": "cd packages/database && pnpm prisma migrate dev",
+    "db:migrate:prod": "cd packages/database && pnpm prisma migrate deploy",
+    "db:seed": "cd packages/database && pnpm prisma db seed",
+    "db:studio": "cd packages/database && pnpm prisma studio",
+    "db:reset": "cd packages/database && pnpm prisma migrate reset",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^1.10.0",
+    "turbo": "^1.10.0",
+    "prettier": "^3.0.0",
+    "eslint": "^8.50.0",
+    "typescript": "^5.2.2"
+  },
+  "packageManager": "pnpm@8.10.0"
+}
